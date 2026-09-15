@@ -38,8 +38,8 @@ jobs:
       run: |
         pytest
 
-
-deploy:                                   
+ 
+ deploy:                                   
     needs: build                            
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
