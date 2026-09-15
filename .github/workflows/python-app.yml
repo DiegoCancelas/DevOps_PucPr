@@ -37,10 +37,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-
-
-deploy:                                   
-    needs: build                            
+  deploy:         
+    needs: build      
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
