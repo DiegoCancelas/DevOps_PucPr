@@ -22,7 +22,7 @@ def carregar_dados():
     """Carrega os dados dos alunos a partir do arquivo JSON, se existir."""
     if os.path.exists(ARQUIVO_DADOS):
         try:
-            with open(ARQUIVO_DADOS, "r", encoding="utf-8") as f:
+            with open(ARQUIVO_DADOS, "r",  encoding="utf-8") as f:
                 return json.load(f)
         except (json.JSONDecodeError, IOError):
             print("Aviso: não foi possível ler o arquivo de dados. Iniciando vazio.")
