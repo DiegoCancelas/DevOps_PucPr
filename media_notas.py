@@ -16,7 +16,7 @@ import json
 import os
 import sys
 
-ARQUIVO_DADOS  = "alunos.json"
+ARQUIVO_DADOS = "alunos.json"
 
 
 def carregar_dados():
