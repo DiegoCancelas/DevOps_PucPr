@@ -37,3 +37,13 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+
+deploy:                                   
+    needs: build                            
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        run: echo "Aqui entra o comando de deploy"
